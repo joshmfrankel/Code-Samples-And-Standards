@@ -35,8 +35,10 @@ end
 
 def calculateWordValue (word)
 
+    # init the sum
     sum = 0
 
+    # Alphabetical Value Hash
     letterValue = {
         "A" => 1,
         "B" => 2,
@@ -69,8 +71,10 @@ def calculateWordValue (word)
     # Split on every character
     charArray = word.split(//)
 
+    # On each character add to the sum
     charArray.each do |value|
 
+        # Add to the sum
         sum += letterValue[value]
 
     end
@@ -83,7 +87,7 @@ end
 total = 0
 
 # Read the filename into a string
-string    = readFileIntoString("p022_names.txt")
+string = readFileIntoString("p022_names.txt")
 
 # Convert the string into an array
 wordArray = convertStringToArray(string)
@@ -95,7 +99,7 @@ sortedWordArray = sortArrayAlphabetically(wordArray)
 sortedWordArray.each do |value, key|
 
     # Get name value score and offset the key
-    nameValue = calculateWordValue(value) * (key+1)
+    nameValue = calculateWordValue(value) * (key + 1)
 
     # Add current value
     total += nameValue
