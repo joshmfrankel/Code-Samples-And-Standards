@@ -1,6 +1,4 @@
 
-
-
 def readFileIntoString (filename)
 
     # Load the file into temp variable
